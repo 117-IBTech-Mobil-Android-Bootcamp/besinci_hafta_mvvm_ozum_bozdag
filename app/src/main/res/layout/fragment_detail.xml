@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="moviesDetailResponse"
+            type="com.info.bootcampweek5.ui.home.detailModel.FilmListDetailViewStateModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/deneme">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="181dp"
+            android:layout_marginLeft="181dp"
+            android:text="@{moviesDetailResponse.title}"
+            android:textColor="#484848"
+            android:fontFamily="@font/sfprodisplayregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView4"
+            tools:layout_editor_absoluteY="350dp" />
+
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="600dp"
+            android:layout_height="350dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/johnwick" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="260dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_rectangle_8"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="40dp"
+            android:layout_height="300dp"
+            app:srcCompat="@drawable/ic_vector__4_"
+            app:layout_constraintTop_toTopOf="@id/imageView5"
+            app:layout_constraintBottom_toBottomOf="@id/imageView5"
+            app:layout_constraintStart_toStartOf="@id/imageView5"
+            android:layout_marginLeft="80dp"
+            tools:layout_editor_absoluteX="92dp"
+            tools:layout_editor_absoluteY="300dp"
+            tools:ignore="VectorDrawableCompat"
+            app:flow_horizontalStyle="packed"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/voteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/sfprodisplayregular"
+            android:textColor="#484848"
+            app:layout_constraintBottom_toBottomOf="@id/imageView5"
+            app:layout_constraintStart_toEndOf="@id/imageView6"
+            app:layout_constraintTop_toTopOf="@id/imageView5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/movieTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/sfprodisplayregular"
+            android:textColor="#484848"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
